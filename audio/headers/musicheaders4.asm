@@ -1,0 +1,4 @@
+; SANS???????
+Music_Sans::
+	audio_header Music_Sans, Ch1, Ch2, Ch3
+	
