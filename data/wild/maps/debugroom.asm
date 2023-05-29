@@ -1,0 +1,16 @@
+DebugRoomMons:
+	db $19
+	db 53,SANS
+	db 54, THE_PEPPER
+	db 55, THE_PEPPER
+	db 53,DICCMAN
+	db 57,DICCMAN
+	db 56,DICCMAN
+	db 58, THE_PEPPER
+	db 55,SANS
+	db 57,SANS
+	db 59,SANS
+	db 60,DICCMAN
+	db 60,SANS
+	db 70,SANS
+	db $00
