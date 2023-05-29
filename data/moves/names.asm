@@ -164,5 +164,10 @@ MoveNames::
 	li "SUPER FANG"
 	li "SLASH"
 	li "SUBSTITUTE"
+	li "TERRIFY"
+	li "EJACULATE"
+	li "BUKKAKE"
+	li "MOONBLAST"
+	li "NIGHTMARE"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

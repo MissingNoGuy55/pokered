@@ -44,8 +44,13 @@ MACRO special_warp_spec
 	db \4
 ENDM
 
+; This is where the first map is set
 FirstMapSpec:
+IF DEF (_DEBUG)
+	special_warp_spec DEBUGROOM, 7, 8, PALLET_TOWN
+ELSE
 	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+ENDC
 TradeCenterSpec1:
 	special_warp_spec TRADE_CENTER,  3, 4, CLUB
 TradeCenterSpec2:

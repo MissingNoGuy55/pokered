@@ -164,6 +164,11 @@ AttackAnimationPointers:
 	dw SuperFangAnim
 	dw SlashAnim
 	dw SubstituteAnim
+	dw TerrifyAnim
+	dw EjaculateAnim
+	dw BukkakeAnim
+	dw MoonblastAnim
+	dw NightmareAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1142,6 +1147,74 @@ SubstituteAnim:
 	battle_anim NO_MOVE, SUBANIM_0_BALL_POOF, 0, 8
 	battle_anim NO_MOVE, SE_SUBSTITUTE_MON
 	db -1 ; end
+	
+TerrifyAnim:
+	battle_anim TRI_ATTACK, SE_DARK_SCREEN_FLASH
+	battle_anim NO_MOVE, SE_DARK_SCREEN_PALETTE
+	battle_anim NO_MOVE, SUBANIM_0_SCRATCHES, 0, 9
+	;battle_anim $06,$FF,$0F
+	battle_anim TRI_ATTACK, SE_DARK_SCREEN_FLASH
+	battle_anim NO_MOVE, SUBANIM_0_STAR_THRICE, 0, 2
+	;battle_anim $06,$FF,$02
+	battle_anim TRI_ATTACK, SE_DARK_SCREEN_FLASH
+	battle_anim NO_MOVE, SUBANIM_0_STAR_THRICE, 0, 2
+	;battle_anim $06,$FF,$02
+	battle_anim TRI_ATTACK, SE_DARK_SCREEN_FLASH
+	battle_anim TRI_ATTACK, SE_DARK_SCREEN_FLASH
+	battle_anim TRI_ATTACK, SE_DARK_SCREEN_FLASH
+	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
+	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
+	db -1
+
+EjaculateAnim:
+	battle_anim SUBSTITUTE, SE_SLIDE_MON_OFF
+	battle_anim NO_MOVE, SUBANIM_0_BALL_POOF, 0, 8
+	battle_anim NO_MOVE, SE_SUBSTITUTE_MON
+	db -1 ; end
+
+BukkakeAnim:
+	; db $46,$5B,$14
+	; db SE_DARK_SCREEN_PALETTE, $FF
+	; db $06,$8B,$41
+	; db SE_WATER_DROPLETS_EVERYWHERE, $3B
+	; db $06,$36,$2C
+	; db SE_RESET_SCREEN_PALETTE, $FF
+	; db $FF
+	battle_anim NO_MOVE, SE_DARK_SCREEN_PALETTE
+	battle_anim ACID, SUBANIM_1_BLOB_TOSS, 1, 6
+	battle_anim BLIZZARD, SE_WATER_DROPLETS_EVERYWHERE
+	battle_anim WATER_GUN, SUBANIM_0_WATER_DROPLETS, 0, 6
+	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
+	db -1 ; end
+
+MoonblastAnim:
+	; db SE_DARK_SCREEN_PALETTE, $FF
+	; db SE_SHOOT_BALLS_UPWARD, $FF
+	; db SE_SHAKE_SCREEN, $9C
+	; db $06,$4B,$2E
+	; db $06,$FF,$01
+	; db SE_RESET_SCREEN_PALETTE, $FF
+	battle_anim NO_MOVE, SE_DARK_SCREEN_PALETTE
+	battle_anim TELEPORT, SE_SHOOT_BALLS_UPWARD
+	battle_anim EARTHQUAKE, SE_SHAKE_SCREEN
+	battle_anim SOLARBEAM, SUBANIM_0_BEAM, 0, 6
+	battle_anim NO_MOVE, SUBANIM_0_STAR, 0, 6
+	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
+	db -1 ; end
+	
+NightmareAnim:
+	battle_anim NIGHTMARE, SE_DARK_SCREEN_PALETTE
+	battle_anim NO_MOVE, SUBANIM_0_STATUS_SLEEP_ENEMY, 0, 15
+	; battle_anim TRI_ATTACK, SE_DARK_SCREEN_FLASH
+	; battle_anim NO_MOVE, SUBANIM_0_STAR_THRICE, 0, 2
+	; battle_anim TRI_ATTACK, SE_DARK_SCREEN_FLASH
+	; battle_anim NO_MOVE, SUBANIM_0_STAR_THRICE, 0, 2
+	battle_anim TRI_ATTACK, SE_DARK_SCREEN_FLASH
+	battle_anim TRI_ATTACK, SE_DARK_SCREEN_FLASH
+	battle_anim TRI_ATTACK, SE_DARK_SCREEN_FLASH
+	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
+	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
+	db -1
 
 BallTossAnim:
 	battle_anim NO_MOVE, SUBANIM_0_BALL_TOSS_HIGH, 0, 3

@@ -47,6 +47,7 @@ TrainerDataPointers:
 	dw ChannelerData
 	dw AgathaData
 	dw LanceData
+	dw MemerData
 	assert_table_length NUM_TRAINERS
 
 ; if first byte != $FF, then
@@ -102,7 +103,9 @@ BugCatcherData:
 ; Route 9
 	db 19, BEEDRILL, BEEDRILL, 0
 	db 20, CATERPIE, WEEDLE, VENONAT, 0
-
+; Debug room
+	db 61, DICCMAN, ELROTH, HORRIFICE, SANS, 0
+	
 LassData:
 ; Route 3
 	db 9, PIDGEY, PIDGEY, 0
@@ -231,7 +234,7 @@ SuperNerdData:
 	db 36, VULPIX, VULPIX, NINETALES, 0
 	db 34, PONYTA, CHARMANDER, VULPIX, GROWLITHE, 0
 	db 41, RAPIDASH, 0
-	db 37, GROWLITHE, VULPIX, 0
+	db $FF, 58, GYARADOS, 56, DRAGONAIR, 56, DRAGONAIR, 60, AERODACTYL, 62, DRAGONITE, 0
 
 HikerData:
 ; Mt. Moon 1F
@@ -742,3 +745,21 @@ AgathaData:
 
 LanceData:
 	db $FF, 58, GYARADOS, 56, DRAGONAIR, 56, DRAGONAIR, 60, AERODACTYL, 62, DRAGONITE, 0
+	
+MemerData:
+; Viridian Gym
+	db 39, NIDORINO, NIDOKING, 0
+; Victory Road 3F
+	db 43, EXEGGUTOR, CLOYSTER, ARCANINE, 0
+	db 43, KINGLER, TENTACRUEL, BLASTOISE, 0
+; Unused
+	db 45, KINGLER, STARMIE, 0
+; Victory Road 1F
+	db 42, IVYSAUR, WARTORTLE, CHARMELEON, CHARIZARD, 0
+; Unused
+	db 44, IVYSAUR, WARTORTLE, CHARMELEON, 0
+	db 49, NIDOKING, 0
+	db 44, KINGLER, CLOYSTER, 0
+; Viridian Gym
+	db 39, SANDSLASH, DUGTRIO, 0
+	db 43, RHYHORN, 0

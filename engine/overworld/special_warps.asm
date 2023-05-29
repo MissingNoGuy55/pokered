@@ -28,6 +28,9 @@ SpecialWarpIn::
 	ld [wLastMap], a
 	ret
 
+LoadSpecialWarpData_predef:
+	call LoadSpecialWarpData
+
 ; gets the map ID, tile block map view pointer, tileset, and coordinates
 LoadSpecialWarpData:
 	ld a, [wd72d]

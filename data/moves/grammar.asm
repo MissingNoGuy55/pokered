@@ -67,6 +67,10 @@ ExclamationPointMoveSets:
 	db SHARPEN
 	db SLASH
 	db SUBSTITUTE
+	db TERRIFY
+	db EJACULATE
+	db BUKKAKE
+	db MOONBLAST
 	db 0 ; end set
 
 	db -1 ; end

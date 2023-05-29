@@ -18,7 +18,7 @@ ExternalMapEntries:
 	external_map  2, 15, CinnabarIslandName
 	external_map  0,  2, IndigoPlateauName
 	external_map 10,  5, SaffronCityName
-	external_map  0,  0, PalletTownName ; unused
+	external_map  0,  0, SaffronCityName ; unused
 	external_map  2, 10, Route1Name
 	external_map  2,  6, Route2Name
 	external_map  4,  3, Route3Name
@@ -116,4 +116,5 @@ InternalMapEntries:
 	internal_map ROCK_TUNNEL_B1F,               14,  3, RockTunnelName
 	internal_map SILPH_CO_ELEVATOR,             10,  5, SilphCoName
 	internal_map AGATHAS_ROOM,                   0,  2, PokemonLeagueName
+	internal_map DEBUGROOM,                      0,  0, PokemonLeagueName
 	db -1 ; end

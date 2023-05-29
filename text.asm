@@ -259,6 +259,7 @@ INCLUDE "text/CeladonCity.asm"
 INCLUDE "text/FuchsiaCity.asm"
 INCLUDE "text/CinnabarIsland.asm"
 INCLUDE "text/SaffronCity.asm"
+INCLUDE "text/debugroom.asm"
 
 INCLUDE "data/text/text_6.asm"
 
@@ -268,7 +269,7 @@ SECTION "Text 11", ROMX
 INCLUDE "data/text/text_7.asm"
 
 
-SECTION "Pokédex Text", ROMX
+SECTION "Pokedex Text", ROMX
 
 INCLUDE "data/pokemon/dex_text.asm"
 

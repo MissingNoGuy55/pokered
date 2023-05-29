@@ -1885,6 +1885,8 @@ AnimationWavyScreen:
 	ld c, $ff
 	ld hl, WavyScreenLineOffsets
 .loop
+	ld a, [hl]		; Missi: fixes the top three lines not being affected (taken from https://github.com/pret/pokered/wiki/Bugs-and-Glitches)
+	ldh [hSCX], a	; Missi: fixes the top three lines not being affected (taken from https://github.com/pret/pokered/wiki/Bugs-and-Glitches)
 	push hl
 .innerLoop
 	call WavyScreen_SetSCX
@@ -1901,6 +1903,7 @@ AnimationWavyScreen:
 	dec c
 	jr nz, .loop
 	xor a
+	ldh [hSCX], a	; Missi: fixes the top three lines not being affected (taken from https://github.com/pret/pokered/wiki/Bugs-and-Glitches)
 	ldh [hWY], a
 	call SaveScreenTilesToBuffer2
 	call ClearScreen

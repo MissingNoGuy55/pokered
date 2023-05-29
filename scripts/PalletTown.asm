@@ -2,6 +2,7 @@ PalletTown_Script:
 	CheckEvent EVENT_GOT_POKEBALLS_FROM_OAK
 	jr z, .next
 	SetEvent EVENT_PALLET_AFTER_GETTING_POKEBALLS
+	SetEvent EVENT_FOLLOWED_OAK_INTO_LAB
 .next
 	call EnableAutoTextBoxDrawing
 	ld hl, PalletTown_ScriptPointers

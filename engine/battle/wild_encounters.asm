@@ -44,6 +44,9 @@ TryDoWildEncounter:
 	ld a, [wCurMapTileset]
 	cp FOREST ; Viridian Forest/Safari Zone
 	jr z, .CantEncounter2
+	ld a, [wCurMap]
+	cp DEBUGROOM ; Missi: special case for extra maps
+	jr z, .CantEncounter2
 	ld a, [wGrassRate]
 .CanEncounter
 ; compare encounter chance with a random number to determine if there will be an encounter

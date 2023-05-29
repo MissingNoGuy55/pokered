@@ -6,19 +6,98 @@
 ; while I was debugging the program."
 ; http://www.ign.com/articles/2000/02/09/abc-news-pokamon-chat-transcript
 
+FailedText::
+	text "Failed to find"
+	line "trainer data!@"
+	prompt
+	
+TrainerType::
+	text "Trainer is:"
+	line "@"
+	text_ram wcd6d
+	text "!@"
+	text_end
+
 SetIshiharaTeam:
-	ld de, IshiharaTeam
+	;ld de, IshiharaTeam
+	ld de, MissiTeam
 .loop
 	ld a, [de]
 	cp -1
+	; jr z, .drawTrainerClass
 	ret z
 	ld [wcf91], a
 	inc de
 	ld a, [de]
 	ld [wCurEnemyLVL], a
+	ld a, $00
+	ld [wMonDataLocation], a
 	inc de
 	call AddPartyMon
-	jr .loop
+	jr .loop	
+	
+.drawTrainerClass
+	; ld a,&4000
+	; or a ; Missi: reset carry flag (5/21/2023)
+	; sbc a,[hl]
+	
+	; ld [hl], a
+	; call PrintText
+	
+	ld a, $04
+	ld [wd0b5], a
+	ld a, TRAINER_NAME
+	ld [wNameListType], a
+	ld a, BANK(TrainerNames)
+	ld [wPredefBank], a
+	call GetName
+	; ld de, wcd6d
+	ld hl, TrainerTypePrompt
+	call PrintText
+	ld c, 100
+	call DelayFrames
+	
+	ld a, OPP_ID_OFFSET + SAILOR
+	ld [wCurOpponent], a
+	ld a, SAILOR
+	ld [wTrainerClass], a
+	
+	predef InitOpponent
+	
+	ret
+	
+.fail
+	ld hl, FailedTextPrompt
+	call PrintText
+	ret
+	
+.foundName
+	ld de, wTrainerName
+	ld bc, $d
+	jp CopyData
+
+FailedTextPrompt::
+	text_far FailedText
+	text_end
+	
+TrainerTypePrompt::
+	text_far TrainerType
+	text_end
+
+MissiTeam:
+	db HORRIFICE, 100
+IF DEF(_DEBUG)
+	db MEW, 100
+ELSE
+	db MEW, 5
+ENDC
+	db SANS, 100
+	db YOURPAL, 100
+	db DICCMAN, 100
+IF DEF(_DEBUG)
+	db POSTAL, 100
+ENDC
+	db -1 ; end
 
 IshiharaTeam:
 	db EXEGGUTOR, 90
@@ -35,7 +114,12 @@ IF DEF(_DEBUG)
 ENDC
 	db -1 ; end
 
+; Missi: exported so it can be accessed through init.asm
+IF DEF (_DEBUG)
+DebugStart::
+ELSE
 DebugStart:
+ENDC
 IF DEF(_DEBUG)
 	xor a ; PLAYER_PARTY_DATA
 	ld [wMonDataLocation], a
@@ -52,23 +136,23 @@ IF DEF(_DEBUG)
 	call SetIshiharaTeam
 
 	; Exeggutor gets four HM moves.
-	ld hl, wPartyMon1Moves
-	ld a, FLY
-	ld [hli], a
-	ld a, CUT
-	ld [hli], a
-	ld a, SURF
-	ld [hli], a
-	ld a, STRENGTH
-	ld [hl], a
-	ld hl, wPartyMon1PP
-	ld a, 15
-	ld [hli], a
-	ld a, 30
-	ld [hli], a
-	ld a, 15
-	ld [hli], a
-	ld [hl], a
+	; ld hl, wPartyMon1Moves
+	; ld a, FLY
+	; ld [hli], a
+	; ld a, CUT
+	; ld [hli], a
+	; ld a, SURF
+	; ld [hli], a
+	; ld a, STRENGTH
+	; ld [hl], a
+	; ld hl, wPartyMon1PP
+	; ld a, 15
+	; ld [hli], a
+	; ld a, 30
+	; ld [hli], a
+	; ld a, 15
+	; ld [hli], a
+	; ld [hl], a
 
 	; Jolteon gets Thunderbolt.
 	ld hl, wPartyMon3Moves + 3

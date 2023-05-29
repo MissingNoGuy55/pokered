@@ -103,6 +103,11 @@ OakSpeech:
 	ld a, [wd72d]
 	and a
 	jr nz, .next
+	; Missi: skip the last part of the speech in debug mode (5/21/2023)
+	ld a, [wd732]
+	bit 1, a
+	jr nz, .next
+	
 	ld hl, OakSpeechText3
 	call PrintText
 .next

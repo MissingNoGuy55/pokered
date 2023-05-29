@@ -29,6 +29,11 @@ INCLUDE "data/maps/headers/FuchsiaCity.asm"
 INCLUDE "data/maps/objects/FuchsiaCity.asm"
 FuchsiaCity_Blocks: INCBIN "maps/FuchsiaCity.blk"
 
+INCLUDE "data/maps/headers/debugroom.asm"
+INCLUDE "scripts/debugroom.asm"
+INCLUDE "data/maps/objects/debugroom.asm"
+DebugRoom_Blocks: INCBIN "maps/debugroom.blk"
+
 
 SECTION "Maps 2", ROMX
 

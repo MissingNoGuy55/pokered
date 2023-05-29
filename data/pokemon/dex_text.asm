@@ -297,6 +297,26 @@ _TangelaDexEntry::
 	next "weed. Its vines"
 	next "shake as it walks"
 	dex
+	
+_ElrothDexEntry::
+	text "Its appearance and"
+	next "gait make people"
+	next "uncomfortable."
+	
+	page "Staring into its"
+	next "mouth is said to"
+	next "cause paralysis"
+	dex
+	
+_HorrificeDexEntry::
+	text "Its appearance is"
+	next "enough to cause a"
+	next "death from shock."
+	
+	page "As a result, it"
+	next "hides in caves and"
+	next "emerges to feed"
+	dex
 
 _GrowlitheDexEntry::
 	text "Very protective"
@@ -467,6 +487,16 @@ _GolemDexEntry::
 	next "dynamite blasts"
 	next "without damage"
 	dex
+	
+_DiccmanDexEntry::
+	text "It has a giant"
+	next "penis it uses to"
+	next "smack opponents."
+
+	page "Those who survive"
+	next "are marked for"
+	next "death"
+	dex
 
 _MagmarDexEntry::
 	text "Its body always"
@@ -476,6 +506,10 @@ _MagmarDexEntry::
 	page "enables it to"
 	next "hide perfectly"
 	next "among flames"
+	dex
+	
+_YourPalDexEntry::
+	text "He's your pal"
 	dex
 
 _ElectabuzzDexEntry::
@@ -496,6 +530,11 @@ _MagnetonDexEntry::
 	page "frequently appear"
 	next "when sunspots"
 	next "flare up"
+	dex
+	
+_SansDexEntry::
+	text "hey kid"
+	next "you can't be here"
 	dex
 
 _KoffingDexEntry::
@@ -546,6 +585,15 @@ _TaurosDexEntry::
 	page "while whipping its"
 	next "body with its"
 	next "long tails"
+	dex
+	
+_ThePepperDexEntry::
+	text "It is owned by"
+	next "RICHARD STALLMAN"
+	dex
+	
+_PostalDexEntry::
+	text "nicE"
 	dex
 
 _FarfetchdDexEntry::

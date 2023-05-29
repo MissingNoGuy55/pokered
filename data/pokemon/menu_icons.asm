@@ -151,4 +151,11 @@ MonPartyData:
 	nybble ICON_SNAKE     ; Dragonite
 	nybble ICON_MON       ; Mewtwo
 	nybble ICON_MON       ; Mew
+	nybble ICON_MON       ; Elroth
+	nybble ICON_MON       ; Horrifice
+	nybble ICON_MON       ; Diccman
+	nybble ICON_MON       ; Your pal
+	nybble ICON_MON       ; Sans
+	nybble ICON_MON       ; The Pepper
+	nybble ICON_MON       ; Postal
 	end_nybble_array NUM_POKEMON

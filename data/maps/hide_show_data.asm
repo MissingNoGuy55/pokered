@@ -247,7 +247,7 @@ MapHSPointers:
 	dw NoHS
 	dw NoHS
 	dw NoHS
-	dw UnusedMapF4HS
+	dw NoHS
 	dw NoHS
 	dw NoHS
 	dw NoHS
@@ -506,7 +506,7 @@ SilphCo11FHS:
 	db SILPH_CO_11F, $04, SHOW
 	db SILPH_CO_11F, $05, SHOW
 UnusedMapF4HS:
-	db UNUSED_MAP_F4, $02, SHOW
+	db DEBUGROOM, $02, SHOW
 PokemonMansion2FHS:
 	db POKEMON_MANSION_2F, $02, SHOW
 PokemonMansion3FHS:
@@ -565,4 +565,5 @@ SeafoamIslandsB4FHS:
 	db SEAFOAM_ISLANDS_B4F, $02, HIDE
 	db SEAFOAM_ISLANDS_B4F, $03, SHOW
 	db $FF, $01, SHOW ; end
+	
 	assert_table_length NUM_HS_OBJECTS + 1

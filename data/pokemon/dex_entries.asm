@@ -30,8 +30,8 @@ PokedexEntryPointers:
 	dw BlastoiseDexEntry
 	dw PinsirDexEntry
 	dw TangelaDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw ElrothDexEntry
+	dw HorrificeDexEntry
 	dw GrowlitheDexEntry
 	dw OnixDexEntry
 	dw FearowDexEntry
@@ -49,19 +49,19 @@ PokedexEntryPointers:
 	dw PsyduckDexEntry
 	dw DrowzeeDexEntry
 	dw GolemDexEntry
-	dw MissingNoDexEntry
+	dw DiccmanDexEntry
 	dw MagmarDexEntry
-	dw MissingNoDexEntry
+	dw YourPalDexEntry
 	dw ElectabuzzDexEntry
 	dw MagnetonDexEntry
 	dw KoffingDexEntry
-	dw MissingNoDexEntry
+	dw SansDexEntry
 	dw MankeyDexEntry
 	dw SeelDexEntry
 	dw DiglettDexEntry
 	dw TaurosDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw ThePepperDexEntry
+	dw PostalDexEntry
 	dw MissingNoDexEntry
 	dw FarfetchdDexEntry
 	dw VenonatDexEntry
@@ -525,6 +525,13 @@ GolemDexEntry:
 	dw 6620
 	text_far _GolemDexEntry
 	text_end
+	
+DiccmanDexEntry:
+	db "PENIS@"
+	db 5,7
+	dw 2280
+	text_far _DiccmanDexEntry
+	db "@"
 
 MagmarDexEntry:
 	db "SPITFIRE@"
@@ -532,6 +539,13 @@ MagmarDexEntry:
 	dw 980
 	text_far _MagmarDexEntry
 	text_end
+	
+YourPalDexEntry:
+	db "BUDDY@"
+	db 4,3
+	dw 1220
+	text_far _YourPalDexEntry
+	db "@"
 
 ElectabuzzDexEntry:
 	db "ELECTRIC@"
@@ -547,6 +561,13 @@ MagnetonDexEntry:
 	text_far _MagnetonDexEntry
 	text_end
 
+SansDexEntry:
+	db "BAD TIME@"
+	db 2,0
+	dw 20
+	text_far _SansDexEntry
+	db "@"	
+	
 KoffingDexEntry:
 	db "POISON GAS@"
 	db 2,0
@@ -581,6 +602,20 @@ TaurosDexEntry:
 	dw 1950
 	text_far _TaurosDexEntry
 	text_end
+	
+ThePepperDexEntry:
+	db "GNU@"
+	db 0,5
+	dw 10
+	text_far _ThePepperDexEntry
+	db "@"
+	
+PostalDexEntry:
+	db "JABRONI@"
+	db 6,1
+	dw 1700
+	text_far _PostalDexEntry
+	db "@"
 
 FarfetchdDexEntry:
 	db "WILD DUCK@"
@@ -1253,6 +1288,20 @@ VictreebelDexEntry:
 	dw 340
 	text_far _VictreebelDexEntry
 	text_end
+	
+ElrothDexEntry:
+	db "UNSETTLING@"
+	db 4,2
+	dw 1200
+	text_far _ElrothDexEntry
+	db "@"
+	
+HorrificeDexEntry:
+	db "ABOMINATION@"
+	db 6,4
+	dw 2400
+	text_far _HorrificeDexEntry
+	db "@"
 
 MissingNoDexEntry:
 	db "???@"

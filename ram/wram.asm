@@ -1532,7 +1532,8 @@ wMonHBackSprite:: dw
 wMonHMoves:: ds NUM_MOVES
 wMonHGrowthRate:: db
 wMonHLearnset:: flag_array NUM_TMS + NUM_HMS
-	ds 1
+;	ds 1
+wMonHPicBank:: db ; Missi
 wMonHeaderEnd::
 
 ; saved at the start of a battle and then written back at the end of the battle
@@ -1698,6 +1699,8 @@ wSavedNPCMovementDirections2Index:: db
 
 wPlayerName:: ds NAME_LENGTH
 
+wDebugRoomCurScript:: db
+	
 
 SECTION "Party Data", WRAM0
 

@@ -44,7 +44,6 @@ DEF START_MONEY EQU $3000
 	ld hl, wGameProgressFlags
 	ld bc, wGameProgressFlagsEnd - wGameProgressFlags
 	call FillMemory ; clear all game progress flags
-
 	jp InitializeMissableObjectsFlags
 
 InitializeEmptyList:

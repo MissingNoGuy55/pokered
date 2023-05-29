@@ -57,7 +57,7 @@ ROMX $6
 	"Doors and Ledges"
 ROMX $7
 	"Maps 3"
-	"Pokémon Names"
+	"Pokemon Names"
 	"Maps 4"
 	"Hidden Objects 1"
 ROMX $8
@@ -91,7 +91,7 @@ ROMX $10
 	"bank10"
 ROMX $11
 	"Maps 5"
-	"Pokédex Rating"
+	"Pokedex Rating"
 	"Maps 6"
 	"Hidden Objects Core"
 ROMX $12
@@ -174,9 +174,12 @@ ROMX $29
 ROMX $2A
 	"Text 11"
 ROMX $2B
-	"Pokédex Text"
-ROMX $2C
+	"Pokedex Text"
 	"Move Names"
+ROMX $2C
+	"Pics 7"
+	"Palette Relocation"
+	"bank1F"
 WRAM0
 	"Audio RAM"
 	org $c100

@@ -152,4 +152,11 @@ MonsterPalettes:
 	db PAL_BROWNMON  ; DRAGONITE
 	db PAL_MEWMON    ; MEWTWO
 	db PAL_MEWMON    ; MEW
-	assert_table_length NUM_POKEMON + 1
+	db PAL_REDMON    ; ELROTH
+	db PAL_REDMON    ; HORRIFICE
+	db PAL_GREYMON   ; DICCMAN
+	db PAL_YELLOWMON ; YOUR PAL
+	db PAL_GREYMON   ; SANS?!?!?
+	db PAL_GREENMON  ; THE PEPPER
+	db PAL_BROWNMON  ; POSTAL
+    assert_table_length NUM_POKEMON + 1

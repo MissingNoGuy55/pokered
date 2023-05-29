@@ -25,7 +25,11 @@ RedisplayStartMenu::
 	jr nz, .loop
 ; if the player pressed tried to go past the top item, wrap around to the bottom
 	CheckEvent EVENT_GOT_POKEDEX
+IF DEF (_DEBUG)
+	ld a, 7
+ELSE
 	ld a, 6 ; there are 7 menu items with the pokedex, so the max index is 6
+ENDC
 	jr nz, .wrapMenuItemId
 	dec a ; there are only 6 menu items without the pokedex
 .wrapMenuItemId
@@ -38,7 +42,11 @@ RedisplayStartMenu::
 ; if the player pressed tried to go past the bottom item, wrap around to the top
 	CheckEvent EVENT_GOT_POKEDEX
 	ld a, [wCurrentMenuItem]
+IF DEF (_DEBUG)
+	ld c, 8
+ELSE
 	ld c, 7 ; there are 7 menu items with the pokedex
+ENDC
 	jr nz, .checkIfPastBottom
 	dec c ; there are only 6 menu items without the pokedex
 .checkIfPastBottom
@@ -74,6 +82,10 @@ RedisplayStartMenu::
 	jp z, StartMenu_SaveReset
 	cp 5
 	jp z, StartMenu_Option
+IF DEF (_DEBUG)
+	cp 6
+	jp z, StartMenu_Debug
+ENDC
 
 ; EXIT falls through to here
 CloseStartMenu::

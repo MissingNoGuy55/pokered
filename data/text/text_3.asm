@@ -77,6 +77,17 @@ _BadlyPoisonedText::
 	text "<TARGET>'s"
 	line "badly poisoned!"
 	prompt
+	
+_NightmareText::
+	text "<TARGET>"
+	line "began having a" 
+	cont "NIGHTMARE!"
+	prompt
+	
+_NightmareFollowUpText::
+	text "<TARGET> is having"
+	line "a NIGHTMARE!"
+	prompt
 
 _BurnedText::
 	text "<TARGET>"

@@ -169,6 +169,93 @@ BadlyPoisonedText:
 	text_far _BadlyPoisonedText
 	text_end
 
+NightmareEffect:
+	ld hl, wEnemyMonStatus
+	ld de, wPlayerMoveEffect
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .nightmareEffect
+	ld hl, wBattleMonStatus
+	ld de, wEnemyMoveEffect
+.nightmareEffect
+	call CheckTargetSubstitute
+	jr nz, .noEffect ; can't poison a substitute target
+	ld a, [hli]
+	and SLP_MASK
+	jr z, .noEffect
+	
+	; ld a, [hli]
+	; ld b, a
+	; and a
+	; jr nz, .noEffect ; miss if target is already statused
+	
+	; cp POISON_SIDE_EFFECT1
+	; ld b, 20 percent + 1 ; chance of poisoning
+	; jr z, .sideEffectTest
+	; cp POISON_SIDE_EFFECT2
+	; ld b, 40 percent + 1 ; chance of poisoning
+	; jr z, .sideEffectTest
+	
+	push hl
+	push de
+	call MoveHitTest ; apply accuracy tests
+	pop de
+	pop hl
+	ld a, [wMoveMissed]
+	and a
+	jr nz, .didntAffect
+	jr .inflictNightmare
+.sideEffectTest
+	call BattleRandom
+	cp b ; was side effect successful?
+	ret nc
+.inflictNightmare
+	dec hl
+	set 3, [hl] ; mon is now poisoned
+	push de
+	dec de
+	ldh a, [hWhoseTurn]
+	and a
+	ld b, SHAKE_SCREEN_ANIM
+	ld hl, wPlayerBattleStatus3
+	ld a, [de]
+	ld de, wPlayerToxicCounter
+	jr nz, .ok
+	ld b, ENEMY_HUD_SHAKE_ANIM
+	ld hl, wEnemyBattleStatus3
+	ld de, wEnemyToxicCounter
+.ok
+	jr .nightmare ; done if move is not Toxic
+.nightmare
+	ld hl, NightmareText
+.continue
+	pop de
+	ld a, [de]
+	cp NIGHTMARE_EFFECT
+	jr z, .regularPoisonEffect
+	ld a, b
+	call PlayBattleAnimation2
+	jp PrintText
+.regularPoisonEffect
+	call PlayCurrentMoveAnimation2
+	jp PrintText
+.noEffect
+	ld a, [de]
+	cp NIGHTMARE_EFFECT
+	ret nz
+.didntAffect
+	ld c, 50
+	call DelayFrames
+	jp PrintDidntAffectText
+
+NightmareText:
+	text_far _NightmareText
+	text_end
+	
+NightmareFollowUpText:
+	text_far _NightmareFollowUpText
+	text_end
+
 DrainHPEffect:
 	jpfar DrainHPEffect_
 

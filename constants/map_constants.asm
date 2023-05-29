@@ -263,10 +263,11 @@ DEF FIRST_INDOOR_MAP EQU const_value
 	map_const UNUSED_MAP_F1,                  0,  0 ; $F1
 	map_const UNUSED_MAP_F2,                  0,  0 ; $F2
 	map_const UNUSED_MAP_F3,                  0,  0 ; $F3
-	map_const UNUSED_MAP_F4,                  0,  0 ; $F4
+	map_const DEBUGROOM,                     20, 18 ; $F4
 	map_const LORELEIS_ROOM,                  5,  6 ; $F5
 	map_const BRUNOS_ROOM,                    5,  6 ; $F6
 	map_const AGATHAS_ROOM,                   5,  6 ; $F7
+DEF NUM_INDOOR_MAPS EQU const_value
 DEF NUM_MAPS EQU const_value
 
 ; Indoor maps, such as houses, use this as the Map ID in their exit warps

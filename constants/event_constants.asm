@@ -693,7 +693,7 @@
 	const_skip
 	const EVENT_BEAT_SILPH_CO_GIOVANNI
 
-; PokÃ©mon Mansion events
+; Pokémon Mansion events
 	const_next $800
 	const_skip
 	const EVENT_BEAT_MANSION_2_TRAINER_0
@@ -772,6 +772,13 @@ DEF INDIGO_PLATEAU_EVENTS_END EQU const_value - 1
 	const_skip 8
 	const EVENT_BEAT_ARTICUNO
 
-; End of events
+; Debug room events
 	const_next $A00
+	const_skip 2
+	const EVENT_BEAT_DEBUGROOM_TRAINER_0
+	const EVENT_BEAT_DEBUGROOM_TRAINER_1
+	
+; End of events
+	const_next $A20
+	
 DEF NUM_EVENTS EQU const_value

@@ -562,7 +562,17 @@ DrawTrainerInfo:
 	inc hl
 	ld de, wPlayTimeMinutes ; minutes
 	lb bc, LEADING_ZEROES | 1, 2
+	call PrintNumber
+	hlcoord 1, 8
+	ld de, TrainerInfo_TrainerIDText
+	call PlaceString
+	; Missi: draw trainer ID
+	inc hl
+	hlcoord 13, 8
+	ld de, wPlayerID 
+	lb bc, LEADING_ZEROES | 2, 5; Trainer ID
 	jp PrintNumber
+	
 
 TrainerInfo_FarCopyData:
 	ld a, BANK(TrainerInfoTextBoxTileGraphics)
@@ -572,6 +582,10 @@ TrainerInfo_NameMoneyTimeText:
 	db   "NAME/"
 	next "MONEY/"
 	next "TIME/@"
+	
+; Missi
+TrainerInfo_TrainerIDText:
+	db	"TRAINER ID: @"
 
 ; $76 is a circle tile
 TrainerInfo_BadgesText:
@@ -656,6 +670,19 @@ StartMenu_Option::
 	call LoadTextBoxTilePatterns
 	call UpdateSprites
 	jp RedisplayStartMenu
+	
+IF DEF (_DEBUG)
+StartMenu_Debug::
+	xor a
+	ldh [hAutoBGTransferEnabled], a
+	call ClearScreen
+	call UpdateSprites
+	callfar DisplayDebugMenu
+	call LoadScreenTilesFromBuffer2 ; restore saved screen
+	call LoadTextBoxTilePatterns
+	call UpdateSprites
+	jp RedisplayStartMenu
+ENDC
 
 SwitchPartyMon::
 	call SwitchPartyMon_InitVarOrSwapData ; swap data

@@ -5,6 +5,9 @@ SoftReset::
 	call DelayFrames
 	; fallthrough
 
+TestPlayerName: db "PLAYER@"
+TestRivalName: db "RIVAL@"
+
 Init::
 ;  Program init.
 
@@ -49,7 +52,7 @@ DEF rLCDC_DEFAULT EQU %11100011
 	dec bc
 	ld a, b
 	or c
-	jr nz, .loop
+	jp nz, .loop
 
 	call ClearVram
 
@@ -107,8 +110,12 @@ DEF rLCDC_DEFAULT EQU %11100011
 	dec a
 	ld [wUpdateSpritesEnabled], a
 
+; Missi: skip intro in debug mode
+IF DEF (_DEBUG)
+ELSE
 	predef PlayIntro
-
+ENDC	
+	
 	call DisableLCD
 	call ClearVram
 	call GBPalNormal
@@ -116,8 +123,63 @@ DEF rLCDC_DEFAULT EQU %11100011
 	ld a, rLCDC_DEFAULT
 	ldh [rLCDC], a
 
-	jp PrepareTitleScreen
+; Missi: immediately jump into a map after game init
+IF DEF (_DEBUG)
+	call LoadFontTilePatterns
+	call LoadHpBarAndStatusTilePatterns
+	call ClearSprites
+	call RunDefaultPaletteCommand
+	
+	call EnableLCD
+	call RunPaletteCommand
+	call GBPalNormal
+	
+	; Missi: attempt to load a save
+	predef LoadSAV
+	
+	ld hl, wd732
+	; set 2, [hl] ; Missi: needed to make this work. marks this warp as fly or dungeon warp
+	set 1, [hl] ; Missi: set the debug bit
+	
+	; Check save file
+	ld a, [wSaveFileStatus]
+	cp 1
+	jr z, .noSaveFile
+	
+	jr .warpInSaveFile
 
+.noSaveFile
+	; Missi: set player and rival names. these are stored far away for space reasons
+	ld hl, TestPlayerName
+	ld de, wPlayerName
+	ld bc, NAME_LENGTH
+	call CopyData
+	
+	ld hl, TestRivalName
+	ld de, wRivalName
+	ld bc, NAME_LENGTH
+	call CopyData
+	
+	predef InitPlayerData2
+	
+	call DebugStart
+	
+	; Missi: do not try to add mons here, this is before everything gets initialized, so it just freezes
+
+	; Missi: fallthrough
+.warpIn
+	call SpecialWarpIn
+	jp SpecialEnterMap
+	
+.warpInSaveFile
+	jp SpecialEnterMap
+	
+	; Missi: trying to add mons here too will just not work due to not everything being initialized
+	
+ELSE
+	jp PrepareTitleScreen
+ENDC
+	
 ClearVram::
 	ld hl, VRAM_Begin
 	ld bc, VRAM_End - VRAM_Begin

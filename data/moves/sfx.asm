@@ -165,6 +165,11 @@ MoveSoundTable:
 	db SFX_BATTLE_26,          $f0, $ff ; SUPER_FANG
 	db SFX_NOT_VERY_EFFECTIVE, $01, $ff ; SLASH
 	db SFX_BATTLE_2C,          $d8, $04 ; SUBSTITUTE
-	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
+	db SFX_BATTLE_0B,          $00, $80 ; TERRIFY
+	db SFX_BATTLE_0B,          $00, $80 ; EJACULATE
+	db SFX_BATTLE_0B,          $00, $80 ; BUKKAKE
+	db SFX_BATTLE_0B,          $00, $80 ; MOONBLAST
+	db SFX_BATTLE_35,          $01, $08 ; NIGHTMARE
+	db SFX_BATTLE_0B,          $00, $30 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

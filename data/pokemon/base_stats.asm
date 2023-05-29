@@ -150,4 +150,12 @@ INCLUDE "data/pokemon/base_stats/dratini.asm"
 INCLUDE "data/pokemon/base_stats/dragonair.asm"
 INCLUDE "data/pokemon/base_stats/dragonite.asm"
 INCLUDE "data/pokemon/base_stats/mewtwo.asm"
-	assert_table_length NUM_POKEMON - 1 ; discount Mew
+INCLUDE "data/pokemon/base_stats/mew.asm"
+INCLUDE "data/pokemon/base_stats/elroth.asm"
+INCLUDE "data/pokemon/base_stats/horrifice.asm"
+INCLUDE "data/pokemon/base_stats/diccman.asm"
+INCLUDE "data/pokemon/base_stats/yourpal.asm"
+INCLUDE "data/pokemon/base_stats/sans.asm"
+INCLUDE "data/pokemon/base_stats/thepepper.asm"
+INCLUDE "data/pokemon/base_stats/postal.asm"
+	assert_table_length NUM_POKEMON ; discount Mew

@@ -13,7 +13,11 @@ INCLUDE "engine/gfx/sprite_oam.asm"
 INCLUDE "engine/gfx/oam_dma.asm"
 INCLUDE "engine/link/print_waiting_text.asm"
 INCLUDE "engine/overworld/sprite_collisions.asm"
-INCLUDE "engine/debug/debug_menu.asm"
+
+; Missi: i would extend on the existing debug menu, but it's kinda crap
+;INCLUDE "engine/debug/debug_menu.asm"
+INCLUDE "engine/debug/new_debug.asm"
+
 INCLUDE "engine/events/pick_up_item.asm"
 INCLUDE "engine/overworld/movement.asm"
 INCLUDE "engine/link/cable_club.asm"
@@ -120,7 +124,7 @@ INCLUDE "engine/overworld/doors.asm"
 INCLUDE "engine/overworld/ledges.asm"
 
 
-SECTION "Pokémon Names", ROMX
+SECTION "Pokemon Names", ROMX
 
 INCLUDE "data/pokemon/names.asm"
 INCLUDE "engine/movie/oak_speech/clear_save.asm"
@@ -212,7 +216,7 @@ INCLUDE "engine/movie/intro.asm"
 INCLUDE "engine/movie/trade2.asm"
 
 
-SECTION "Pokédex Rating", ROMX
+SECTION "Pokedex Rating", ROMX
 
 INCLUDE "engine/events/pokedex_rating.asm"
 
@@ -320,7 +324,6 @@ INCLUDE "engine/battle/battle_transitions.asm"
 INCLUDE "engine/items/town_map.asm"
 INCLUDE "engine/gfx/mon_icons.asm"
 INCLUDE "engine/events/in_game_trades.asm"
-INCLUDE "engine/gfx/palettes.asm"
 INCLUDE "engine/menus/save.asm"
 
 
@@ -353,4 +356,11 @@ INCLUDE "data/battle_anims/subanimations.asm"
 INCLUDE "data/battle_anims/frame_blocks.asm"
 INCLUDE "engine/movie/evolution.asm"
 INCLUDE "engine/overworld/elevator.asm"
+
+SECTION "bank1F", ROMX
+
 INCLUDE "engine/items/tm_prices.asm"
+
+SECTION "Palette Relocation", ROMX
+
+INCLUDE "engine/gfx/palettes.asm"

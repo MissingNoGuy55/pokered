@@ -33,8 +33,8 @@ EvosMovesPointerTable:
 	dw BlastoiseEvosMoves
 	dw PinsirEvosMoves
 	dw TangelaEvosMoves
-	dw MissingNo1FEvosMoves
-	dw MissingNo20EvosMoves
+	dw ElrothEvosMoves
+	dw HorrificeEvosMoves
 	dw GrowlitheEvosMoves
 	dw OnixEvosMoves
 	dw FearowEvosMoves
@@ -52,19 +52,19 @@ EvosMovesPointerTable:
 	dw PsyduckEvosMoves
 	dw DrowzeeEvosMoves
 	dw GolemEvosMoves
-	dw MissingNo32EvosMoves
+	dw DiccmanEvosMoves
 	dw MagmarEvosMoves
-	dw MissingNo34EvosMoves
+	dw YourPalEvosMoves
 	dw ElectabuzzEvosMoves
 	dw MagnetonEvosMoves
 	dw KoffingEvosMoves
-	dw MissingNo38EvosMoves
+	dw SansEvosMoves
 	dw MankeyEvosMoves
 	dw SeelEvosMoves
 	dw DiglettEvosMoves
 	dw TaurosEvosMoves
-	dw MissingNo3DEvosMoves
-	dw MissingNo3EEvosMoves
+	dw ThePepperEvosMoves
+	dw PostalEvosMoves
 	dw MissingNo3FEvosMoves
 	dw FarfetchdEvosMoves
 	dw VenonatEvosMoves
@@ -540,16 +540,28 @@ TangelaEvosMoves:
 	db 49, GROWTH
 	db 0
 
-MissingNo1FEvosMoves:
+ElrothEvosMoves:
 ; Evolutions
+	db EV_LEVEL, 24, HORRIFICE
 	db 0
 ; Learnset
+	db 11, ACID
+	db 14, HYPNOSIS
+	db 22, SWIFT
+	db 26, POISONPOWDER
+	db 34, SLAM
+	db 40, DREAM_EATER
 	db 0
 
-MissingNo20EvosMoves:
+HorrificeEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 42, GLARE
+	db 48, TOXIC
+	db 55, HYPNOSIS
+	db 60, TERRIFY
+	db 65, NIGHTMARE
 	db 0
 
 GrowlitheEvosMoves:
@@ -754,10 +766,15 @@ GolemEvosMoves:
 	db 43, EXPLOSION
 	db 0
 
-MissingNo32EvosMoves:
+DiccmanEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 7,  ROCK_THROW
+	db 11, DOUBLESLAP
+	db 16, BIDE
+	db 24, BUKKAKE
+	db 30, ROCK_SLIDE
 	db 0
 
 MagmarEvosMoves:
@@ -772,10 +789,17 @@ MagmarEvosMoves:
 	db 55, FLAMETHROWER
 	db 0
 
-MissingNo34EvosMoves:
+YourPalEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 11, SELFDESTRUCT
+	db 20, HYPNOSIS
+	db 25, DREAM_EATER
+	db 34, BUKKAKE
+	db 45, EXPLOSION
+	db 65, MOONBLAST
+	db 100, TRANSFORM
 	db 0
 
 ElectabuzzEvosMoves:
@@ -813,10 +837,18 @@ KoffingEvosMoves:
 	db 48, EXPLOSION
 	db 0
 
-MissingNo38EvosMoves:
+SansEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 14, CONFUSION
+	db 20, CONFUSE_RAY
+	db 24, GLARE
+	db 33, DREAM_EATER
+	db 33, HYPNOSIS
+	db 48, PSYCHIC_M
+	db 52, SKULL_BASH
+	db 60, MOONBLAST
 	db 0
 
 MankeyEvosMoves:
@@ -866,16 +898,28 @@ TaurosEvosMoves:
 	db 51, TAKE_DOWN
 	db 0
 
-MissingNo3DEvosMoves:
+ThePepperEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 8, EMBER
+	db 10, RAZOR_LEAF
+	db 24, SELFDESTRUCT
+	db 35, LEER
+	db 44, FLAMETHROWER
+	db 51, SOLARBEAM
 	db 0
 
-MissingNo3EEvosMoves:
+PostalEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 8, LEER
+	db 10, ROCK_THROW
+	db 22, BIDE
+	db 35, BODY_SLAM
+	db 44, EARTHQUAKE
+	db 51, TAKE_DOWN
 	db 0
 
 MissingNo3FEvosMoves:

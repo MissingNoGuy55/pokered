@@ -173,6 +173,7 @@ HiddenObjectPointers:
 	dw VermilionCityHiddenObjects
 	dw CeruleanCityHiddenObjects
 	dw Route4HiddenObjects
+	dw DebugRoomHiddenObjects
 
 MACRO hidden_object
 	db \2 ; y coord
@@ -397,6 +398,17 @@ CinnabarPokecenterHiddenObjects:
 	hidden_object  0,  4, SPRITE_FACING_UP, PrintBenchGuyText
 	hidden_object 13,  3, SPRITE_FACING_UP, OpenPokemonCenterPC
 	db -1 ; end
+	
+DebugRoomHiddenObjects:
+	hidden_object     10, 10, TOWN_MAP, HiddenItems 
+	hidden_object      9,  9, ANY_FACING, OpenPokemonCenterPC
+	db -1
+;	db $0A,$0A,TOWN_MAP
+;	dbw BANK(HiddenItems),HiddenItems
+;	db $09,$09,$04
+;	db BANK(OpenPokemonCenterPC)
+;	dw OpenPokemonCenterPC
+;	db -1
 
 SaffronGymHiddenObjects:
 	hidden_object  9, 15, SPRITE_FACING_UP, GymStatues

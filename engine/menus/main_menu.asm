@@ -432,6 +432,17 @@ SaveScreenInfoText:
 	next "#DEX    "
 	next "TIME@"
 
+IF DEF (_DEBUG)
+
+DebugMenuBattleOptionText:
+	db   "BATTLE STYLE"
+	next " SHIFT    SET@"
+
+DebugMenuCancelText:
+	db "CANCEL@"
+
+ENDC
+
 DisplayOptionMenu:
 	hlcoord 0, 0
 	ld b, 3

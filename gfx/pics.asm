@@ -199,8 +199,6 @@ KakunaPicBack::       INCBIN "gfx/pokemon/back/kakunab.pic"
 BeedrillPicFront::    INCBIN "gfx/pokemon/front/beedrill.pic"
 BeedrillPicBack::     INCBIN "gfx/pokemon/back/beedrillb.pic"
 
-FossilKabutopsPic::   INCBIN "gfx/pokemon/front/fossilkabutops.pic"
-
 
 SECTION "Pics 4", ROMX
 
@@ -309,8 +307,6 @@ WartortlePicFront::    INCBIN "gfx/pokemon/front/wartortle.pic"
 WartortlePicBack::     INCBIN "gfx/pokemon/back/wartortleb.pic"
 CharizardPicFront::    INCBIN "gfx/pokemon/front/charizard.pic"
 CharizardPicBack::     INCBIN "gfx/pokemon/back/charizardb.pic"
-FossilAerodactylPic::  INCBIN "gfx/pokemon/front/fossilaerodactyl.pic"
-GhostPic::             INCBIN "gfx/battle/ghost.pic"
 OddishPicFront::       INCBIN "gfx/pokemon/front/oddish.pic"
 OddishPicBack::        INCBIN "gfx/pokemon/back/oddishb.pic"
 GloomPicFront::        INCBIN "gfx/pokemon/front/gloom.pic"
@@ -373,3 +369,24 @@ LoreleiPic::       INCBIN "gfx/trainers/lorelei.pic"
 ChannelerPic::     INCBIN "gfx/trainers/channeler.pic"
 AgathaPic::        INCBIN "gfx/trainers/agatha.pic"
 LancePic::         INCBIN "gfx/trainers/lance.pic"
+
+SECTION "Pics 7", ROMX
+
+ElrothPicFront::      INCBIN "gfx/pokemon/front/elroth.pic"
+ElrothPicBack::       INCBIN "gfx/pokemon/back/elrothb.pic"
+HorrificePicFront::   INCBIN "gfx/pokemon/front/horrifice.pic"
+HorrificePicBack::    INCBIN "gfx/pokemon/back/horrificeb.pic"
+DiccmanPicFront::     INCBIN "gfx/pokemon/front/diccman.pic"
+DiccmanPicBack::      INCBIN "gfx/pokemon/back/diccmanb.pic"
+YourPalPicFront::     INCBIN "gfx/pokemon/front/yourpal.pic"
+YourPalPicBack::      INCBIN "gfx/pokemon/back/yourpalb.pic"
+SansPicFront::        INCBIN "gfx/pokemon/front/sans.pic"
+SansPicBack::         INCBIN "gfx/pokemon/back/sansb.pic"
+ThePepperPicFront::   INCBIN "gfx/pokemon/front/thepepper.pic"
+ThePepperPicBack::    INCBIN "gfx/pokemon/back/thepepperb.pic"
+PostalPicFront::      INCBIN "gfx/pokemon/front/postal.pic"
+PostalPicBack::       INCBIN "gfx/pokemon/back/snorlaxb.pic"
+
+GhostPic::             INCBIN "gfx/battle/ghost.pic"
+FossilKabutopsPic::    INCBIN "gfx/pokemon/front/fossilkabutops.pic"
+FossilAerodactylPic::  INCBIN "gfx/pokemon/front/fossilaerodactyl.pic"
