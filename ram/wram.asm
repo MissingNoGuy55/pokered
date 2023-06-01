@@ -586,6 +586,8 @@ wOverrideSimulatedJoypadStatesMask:: db
 
 	ds 1
 
+wDebugCurrentSongSelection:: db
+
 ; This union spans 30 bytes.
 UNION
 wTradedPlayerMonSpecies:: db
