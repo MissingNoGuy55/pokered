@@ -3,6 +3,7 @@ DebugRoom_Object:
 
 	def_warp_events
 	warp_event 25, 31, PALLET_TOWN, 3
+	warp_event  7, 25, ROUTE_38, 1
 
 	def_bg_events
 

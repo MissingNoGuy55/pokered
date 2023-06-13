@@ -68,3 +68,6 @@ Facility_Coll::
 
 Plateau_Coll::
 	coll_tiles $1b, $23, $2c, $2d, $3b, $45
+	
+Johto_Coll::
+	coll_tiles $00, $03, $04, $05, $06, $07, $29, $39, $40, $56

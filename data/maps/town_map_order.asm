@@ -47,4 +47,5 @@ TownMapOrder:
 	db INDIGO_PLATEAU
 	db POWER_PLANT
 	db DEBUGROOM
+	db ROUTE_38
 TownMapOrderEnd:

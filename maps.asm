@@ -29,12 +29,6 @@ INCLUDE "data/maps/headers/FuchsiaCity.asm"
 INCLUDE "data/maps/objects/FuchsiaCity.asm"
 FuchsiaCity_Blocks: INCBIN "maps/FuchsiaCity.blk"
 
-INCLUDE "data/maps/headers/debugroom.asm"
-INCLUDE "scripts/debugroom.asm"
-INCLUDE "data/maps/objects/debugroom.asm"
-DebugRoom_Blocks: INCBIN "maps/debugroom.blk"
-
-
 SECTION "Maps 2", ROMX
 
 INCLUDE "scripts/PalletTown.asm"
@@ -1224,3 +1218,13 @@ INCLUDE "data/maps/headers/AgathasRoom.asm"
 INCLUDE "scripts/AgathasRoom.asm"
 INCLUDE "data/maps/objects/AgathasRoom.asm"
 AgathasRoom_Blocks: INCBIN "maps/AgathasRoom.blk"
+
+INCLUDE "data/maps/headers/debugroom.asm"
+INCLUDE "scripts/debugroom.asm"
+INCLUDE "data/maps/objects/debugroom.asm"
+DebugRoom_Blocks: INCBIN "maps/debugroom.blk"
+
+INCLUDE "data/maps/headers/route38.asm"
+INCLUDE "scripts/route38.asm"
+INCLUDE "data/maps/objects/route38.asm"
+Route38_Blocks: INCBIN "maps/route38.blk"

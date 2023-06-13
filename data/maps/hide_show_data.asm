@@ -42,6 +42,7 @@ MapHSPointers:
 	dw Route25HS
 	dw NoHS
 	dw NoHS
+	dw NoHS
 	dw BluesHouseHS
 	dw OaksLabHS
 	dw NoHS

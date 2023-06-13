@@ -47,7 +47,7 @@ ENDM
 ; This is where the first map is set
 FirstMapSpec:
 IF DEF (_DEBUG)
-	special_warp_spec DEBUGROOM, 7, 8, PALLET_TOWN
+	special_warp_spec ROUTE_38, 32, 9, OVERWORLD
 ELSE
 	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
 ENDC
@@ -80,6 +80,7 @@ FlyWarpDataPtr:
 	fly_warp_spec SAFFRON_CITY,    .SaffronCity
 	fly_warp_spec ROUTE_4,         .Route4
 	fly_warp_spec ROUTE_10,        .Route10
+	fly_warp_spec ROUTE_38,        .Route38
 
 .PalletTown:     fly_warp PALLET_TOWN,      5,  6
 .ViridianCity:   fly_warp VIRIDIAN_CITY,   23, 26
@@ -94,3 +95,4 @@ FlyWarpDataPtr:
 .SaffronCity:    fly_warp SAFFRON_CITY,     9, 30
 .Route4:         fly_warp ROUTE_4,         11,  6
 .Route10:        fly_warp ROUTE_10,        11, 20
+.Route38:        fly_warp ROUTE_38,        11, 20

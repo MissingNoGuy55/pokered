@@ -1702,6 +1702,7 @@ wSavedNPCMovementDirections2Index:: db
 wPlayerName:: ds NAME_LENGTH
 
 wDebugRoomCurScript:: db
+wRoute38CurScript:: db
 	
 
 SECTION "Party Data", WRAM0
