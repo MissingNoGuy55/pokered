@@ -29,6 +29,13 @@ PlayBattleMusic::
 	ld a, MUSIC_FINAL_BATTLE
 	jr .playSong
 .wildBattle
+	ld a, [wCurMap]
+	cp ROUTE_38
+	jr z, .johto
 	ld a, MUSIC_WILD_BATTLE
+	jr .playSong
+.johto
+	ld c, BANK(Music_JohtoWildBattle)
+	ld a, MUSIC_JOHTO_WILD_BATTLE
 .playSong
 	jp PlayMusic

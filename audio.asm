@@ -7,6 +7,8 @@ INCLUDE "audio/headers/sfxheaders2.asm"
 SECTION "Sound Effect Headers 3", ROMX
 INCLUDE "audio/headers/sfxheaders3.asm"
 
+SECTION "Sound Effect Headers 4", ROMX
+INCLUDE "audio/headers/sfxheaders4.asm"
 
 SECTION "Music Headers 1", ROMX
 INCLUDE "audio/headers/musicheaders1.asm"
@@ -17,6 +19,8 @@ INCLUDE "audio/headers/musicheaders2.asm"
 SECTION "Music Headers 3", ROMX
 INCLUDE "audio/headers/musicheaders3.asm"
 
+SECTION "Music Headers 4", ROMX
+INCLUDE "audio/headers/musicheaders4.asm"
 
 SECTION "Sound Effects 1", ROMX
 
@@ -351,30 +355,184 @@ INCLUDE "audio/sfx/cry20_3.asm"
 INCLUDE "audio/sfx/cry21_3.asm"
 INCLUDE "audio/sfx/cry22_3.asm"
 
+SECTION "Sound Effects 4", ROMX
+
+INCLUDE "audio/sfx/noise_instrument01_4.asm"
+INCLUDE "audio/sfx/noise_instrument02_4.asm"
+INCLUDE "audio/sfx/noise_instrument03_4.asm"
+INCLUDE "audio/sfx/noise_instrument04_4.asm"
+INCLUDE "audio/sfx/noise_instrument05_4.asm"
+INCLUDE "audio/sfx/noise_instrument06_4.asm"
+INCLUDE "audio/sfx/noise_instrument07_4.asm"
+INCLUDE "audio/sfx/noise_instrument08_4.asm"
+INCLUDE "audio/sfx/noise_instrument09_4.asm"
+INCLUDE "audio/sfx/noise_instrument10_4.asm"
+INCLUDE "audio/sfx/noise_instrument11_4.asm"
+INCLUDE "audio/sfx/noise_instrument12_4.asm"
+INCLUDE "audio/sfx/noise_instrument13_4.asm"
+INCLUDE "audio/sfx/noise_instrument14_4.asm"
+INCLUDE "audio/sfx/noise_instrument15_4.asm"
+INCLUDE "audio/sfx/noise_instrument16_4.asm"
+INCLUDE "audio/sfx/noise_instrument17_4.asm"
+INCLUDE "audio/sfx/noise_instrument18_4.asm"
+INCLUDE "audio/sfx/noise_instrument19_4.asm"
+
+INCLUDE "audio/sfx/get_item1_4.asm"
+INCLUDE "audio/sfx/get_item2_4.asm"
+INCLUDE "audio/sfx/tink_4.asm"
+INCLUDE "audio/sfx/heal_hp_4.asm"
+INCLUDE "audio/sfx/heal_ailment_4.asm"
+INCLUDE "audio/sfx/start_menu_4.asm"
+INCLUDE "audio/sfx/press_ab_4.asm"
+INCLUDE "audio/sfx/pokedex_rating_4.asm"
+INCLUDE "audio/sfx/get_key_item_4.asm"
+INCLUDE "audio/sfx/poisoned_4.asm"
+INCLUDE "audio/sfx/trade_machine_4.asm"
+INCLUDE "audio/sfx/turn_on_pc_4.asm"
+INCLUDE "audio/sfx/turn_off_pc_4.asm"
+INCLUDE "audio/sfx/enter_pc_4.asm"
+INCLUDE "audio/sfx/shrink_4.asm"
+INCLUDE "audio/sfx/switch_4.asm"
+INCLUDE "audio/sfx/healing_machine_4.asm"
+INCLUDE "audio/sfx/teleport_exit1_4.asm"
+INCLUDE "audio/sfx/teleport_enter1_4.asm"
+INCLUDE "audio/sfx/teleport_exit2_4.asm"
+INCLUDE "audio/sfx/ledge_4.asm"
+INCLUDE "audio/sfx/teleport_enter2_4.asm"
+INCLUDE "audio/sfx/fly_4.asm"
+
+INCLUDE "audio/sfx/denied_4.asm"
+INCLUDE "audio/sfx/arrow_tiles_4.asm"
+INCLUDE "audio/sfx/push_boulder_4.asm"
+INCLUDE "audio/sfx/ss_anne_horn_4.asm"
+INCLUDE "audio/sfx/withdraw_deposit_4.asm"
+INCLUDE "audio/sfx/cut_4.asm"
+INCLUDE "audio/sfx/go_inside_4.asm"
+INCLUDE "audio/sfx/swap_4.asm"
+INCLUDE "audio/sfx/59_4.asm"
+INCLUDE "audio/sfx/pokeflute_4.asm"
+INCLUDE "audio/sfx/purchase_4.asm"
+INCLUDE "audio/sfx/collision_4.asm"
+INCLUDE "audio/sfx/go_outside_4.asm"
+INCLUDE "audio/sfx/save_4.asm"
+
+Audio4_WavePointers:
+INCLUDE "audio/wave_samples.asm"
+
+INCLUDE "audio/sfx/caught_mon_bank4.asm"
+INCLUDE "audio/sfx/silph_scope_bank4.asm"
+INCLUDE "audio/sfx/ball_toss_bank4.asm"
+INCLUDE "audio/sfx/ball_poof_bank4.asm"
+INCLUDE "audio/sfx/faint_thud_bank4.asm"
+INCLUDE "audio/sfx/run_bank4.asm"
+INCLUDE "audio/sfx/dex_page_added_bank4.asm"
+INCLUDE "audio/sfx/pokeflute_ch7_bank4.asm"
+; INCLUDE "audio/sfx/peck_bank4.asm"
+; INCLUDE "audio/sfx/faint_fall_bank4.asm"
+; INCLUDE "audio/sfx/battle_09_bank4.asm"
+; INCLUDE "audio/sfx/pound_bank4.asm"
+; INCLUDE "audio/sfx/battle_0b_bank4.asm"
+; INCLUDE "audio/sfx/battle_0c_bank4.asm"
+; INCLUDE "audio/sfx/battle_0d_bank4.asm"
+; INCLUDE "audio/sfx/battle_0e_bank4.asm"
+; INCLUDE "audio/sfx/battle_0f_bank4.asm"
+; INCLUDE "audio/sfx/damage_bank4.asm"
+; INCLUDE "audio/sfx/not_very_effective_bank4.asm"
+; INCLUDE "audio/sfx/battle_12_bank4.asm"
+; INCLUDE "audio/sfx/battle_13_bank4.asm"
+; INCLUDE "audio/sfx/battle_14_bank4.asm"
+; INCLUDE "audio/sfx/vine_whip_bank4.asm"
+; INCLUDE "audio/sfx/battle_16_bank4.asm"
+; INCLUDE "audio/sfx/battle_17_bank4.asm"
+; INCLUDE "audio/sfx/battle_18_bank4.asm"
+; INCLUDE "audio/sfx/battle_19_bank4.asm"
+; INCLUDE "audio/sfx/super_effective_bank4.asm"
+; INCLUDE "audio/sfx/battle_1b_bank4.asm"
+; INCLUDE "audio/sfx/battle_1c_bank4.asm"
+; INCLUDE "audio/sfx/doubleslap_bank4.asm"
+; INCLUDE "audio/sfx/battle_1e_bank4.asm"
+; INCLUDE "audio/sfx/horn_drill_bank4.asm"
+; INCLUDE "audio/sfx/battle_20_bank4.asm"
+; INCLUDE "audio/sfx/battle_21_bank4.asm"
+; INCLUDE "audio/sfx/battle_22_bank4.asm"
+; INCLUDE "audio/sfx/battle_23_bank4.asm"
+; INCLUDE "audio/sfx/battle_24_bank4.asm"
+; INCLUDE "audio/sfx/battle_25_bank4.asm"
+; INCLUDE "audio/sfx/battle_26_bank4.asm"
+; INCLUDE "audio/sfx/battle_27_bank4.asm"
+; INCLUDE "audio/sfx/battle_28_bank4.asm"
+; INCLUDE "audio/sfx/battle_29_bank4.asm"
+; INCLUDE "audio/sfx/battle_2a_bank4.asm"
+; INCLUDE "audio/sfx/battle_2b_bank4.asm"
+; INCLUDE "audio/sfx/battle_2c_bank4.asm"
+; INCLUDE "audio/sfx/psybeam_bank4.asm"
+; INCLUDE "audio/sfx/battle_2e_bank4.asm"
+; INCLUDE "audio/sfx/battle_2f_bank4.asm"
+; INCLUDE "audio/sfx/psychic_m_bank4.asm"
+; INCLUDE "audio/sfx/battle_31_bank4.asm"
+; INCLUDE "audio/sfx/battle_32_bank4.asm"
+; INCLUDE "audio/sfx/battle_33_bank4.asm"
+; INCLUDE "audio/sfx/battle_34_bank4.asm"
+; INCLUDE "audio/sfx/battle_35_bank4.asm"
+; INCLUDE "audio/sfx/battle_36_bank4.asm"
+
+INCLUDE "audio/sfx/cry09_4.asm"
+INCLUDE "audio/sfx/cry23_4.asm"
+INCLUDE "audio/sfx/cry24_4.asm"
+INCLUDE "audio/sfx/cry11_4.asm"
+INCLUDE "audio/sfx/cry25_4.asm"
+INCLUDE "audio/sfx/cry03_4.asm"
+INCLUDE "audio/sfx/cry0f_4.asm"
+INCLUDE "audio/sfx/cry10_4.asm"
+INCLUDE "audio/sfx/cry00_4.asm"
+INCLUDE "audio/sfx/cry0e_4.asm"
+INCLUDE "audio/sfx/cry06_4.asm"
+INCLUDE "audio/sfx/cry07_4.asm"
+INCLUDE "audio/sfx/cry05_4.asm"
+INCLUDE "audio/sfx/cry0b_4.asm"
+INCLUDE "audio/sfx/cry0c_4.asm"
+INCLUDE "audio/sfx/cry02_4.asm"
+INCLUDE "audio/sfx/cry0d_4.asm"
+INCLUDE "audio/sfx/cry01_4.asm"
+INCLUDE "audio/sfx/cry0a_4.asm"
+INCLUDE "audio/sfx/cry08_4.asm"
+INCLUDE "audio/sfx/cry04_4.asm"
+INCLUDE "audio/sfx/cry19_4.asm"
+INCLUDE "audio/sfx/cry16_4.asm"
+INCLUDE "audio/sfx/cry1b_4.asm"
+INCLUDE "audio/sfx/cry12_4.asm"
+INCLUDE "audio/sfx/cry13_4.asm"
+INCLUDE "audio/sfx/cry14_4.asm"
+INCLUDE "audio/sfx/cry1e_4.asm"
+INCLUDE "audio/sfx/cry15_4.asm"
+INCLUDE "audio/sfx/cry17_4.asm"
+INCLUDE "audio/sfx/cry1c_4.asm"
+INCLUDE "audio/sfx/cry1a_4.asm"
+INCLUDE "audio/sfx/cry1d_4.asm"
+INCLUDE "audio/sfx/cry18_4.asm"
+INCLUDE "audio/sfx/cry1f_4.asm"
+INCLUDE "audio/sfx/cry20_4.asm"
+INCLUDE "audio/sfx/cry21_4.asm"
+INCLUDE "audio/sfx/cry22_4.asm"
 
 SECTION "Audio Engine 1", ROMX
 
-INCLUDE "audio/play_battle_music.asm"
 INCLUDE "audio/engine_1.asm"
 INCLUDE "audio/alternate_tempo.asm"
-
 
 SECTION "Low Health Alarm (Audio Engine 2)", ROMX
 
 INCLUDE "audio/low_health_alarm.asm"
-
 
 SECTION "Audio Engine 2", ROMX
 
 INCLUDE "audio/engine_2.asm"
 INCLUDE "audio/poke_flute.asm"
 
-
 SECTION "Audio Engine 3", ROMX
 
 INCLUDE "audio/pokedex_rating_sfx.asm"
 INCLUDE "audio/engine_3.asm"
-
 
 SECTION "Music 1", ROMX
 
@@ -404,7 +562,6 @@ INCLUDE "audio/music/safarizone.asm"
 INCLUDE "audio/music/gym.asm"
 INCLUDE "audio/music/pokecenter.asm"
 
-
 SECTION "Music 2", ROMX
 
 INCLUDE "audio/sfx/pokeflute_ch5_ch6.asm"
@@ -419,7 +576,6 @@ INCLUDE "audio/sfx/caught_mon.asm"
 INCLUDE "audio/music/defeatedtrainer.asm"
 INCLUDE "audio/music/defeatedwildmon.asm"
 INCLUDE "audio/music/defeatedgymleader.asm"
-
 
 SECTION "Music 3", ROMX
 
@@ -445,3 +601,15 @@ INCLUDE "audio/music/surfing.asm"
 INCLUDE "audio/music/jigglypuffsong.asm"
 INCLUDE "audio/music/halloffame.asm"
 INCLUDE "audio/music/credits.asm"
+
+SECTION "Audio Engine 4", ROMX
+
+INCLUDE "audio/engine_4.asm"
+INCLUDE "audio/play_battle_music.asm"
+
+SECTION "Music 4", ROMX
+
+INCLUDE "audio/music/victoryroad.asm"
+INCLUDE "audio/music/rockethideoutgsc.asm"
+INCLUDE "audio/music/route37.asm"
+INCLUDE "audio/music/johtowildbattle.asm"

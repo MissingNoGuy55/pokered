@@ -1,16 +1,15 @@
-Music_VictoryRoad_Ch1::
+Music_VictoryRoad_Ch1:
 	tempo 144
 	volume 7, 7
 	stereo_panning %1101, %1111
 	duty_cycle 3
-	; pitch_offset 2
 	note_type 12, 11, 3
 .mainloop:
 .loop1:
 	sound_call .sub1
 	sound_loop 6, .loop1
 .loop2:
-	volume 11, 2
+	volume_envelope 11, 2
 	octave 2
 	note A_, 1
 	octave 3
@@ -19,7 +18,7 @@ Music_VictoryRoad_Ch1::
 	rest 1
 	octave 2
 	note A_, 1
-	volume 11, 7
+	volume_envelope 11, 7
 	octave 3
 	note C#, 3
 	octave 2
@@ -37,7 +36,7 @@ Music_VictoryRoad_Ch1::
 	sound_loop 0, .mainloop
 
 .sub1:
-	volume 11, 2
+	volume_envelope 11, 2
 	octave 2
 	note G_, 1
 	note B_, 1
@@ -46,7 +45,7 @@ Music_VictoryRoad_Ch1::
 	rest 1
 	octave 2
 	note G_, 1
-	volume 11, 7
+	volume_envelope 11, 7
 	note B_, 3
 	note G_, 1
 	octave 3
@@ -57,7 +56,7 @@ Music_VictoryRoad_Ch1::
 	note F#, 3
 	sound_ret
 
-Music_VictoryRoad_Ch2::
+Music_VictoryRoad_Ch2:
 	duty_cycle 3
 	vibrato 16, 2, 4
 .mainloop:
@@ -128,7 +127,7 @@ Music_VictoryRoad_Ch2::
 	note A_, 1
 	sound_ret
 
-Music_VictoryRoad_Ch3::
+Music_VictoryRoad_Ch3:
 	stereo_panning %1111, %1101
 	note_type 12, 2, 8
 .mainloop:
@@ -168,8 +167,8 @@ Music_VictoryRoad_Ch3::
 	note A_, 3
 	sound_ret
 
-Music_VictoryRoad_Ch4::
-	; toggle_noise 0
+Music_VictoryRoad_Ch4:
+	;toggle_noise 0
 	drum_speed 12
 .mainloop:
 	drum_note 3, 2

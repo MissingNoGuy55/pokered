@@ -56,7 +56,11 @@ ENDM
 	music_const MUSIC_MEET_FEMALE_TRAINER, Music_MeetFemaleTrainer
 	music_const MUSIC_MEET_MALE_TRAINER,   Music_MeetMaleTrainer
 	
-	music_const MUSIC_SANS,                Music_Sans
+	; music_const MUSIC_SANS,                Music_Sans
+	music_const MUSIC_VICTORY_ROAD,        Music_VictoryRoad
+	music_const MUSIC_ROCKET_HIDEOUT,      Music_RocketHideout
+	music_const MUSIC_ROUTE37,             Music_Route37
+	music_const MUSIC_JOHTO_WILD_BATTLE,   Music_JohtoWildBattle
 
 	; AUDIO_1 AUDIO_2 AUDIO_3
 DEF NOISE_INSTRUMENTS_START EQUS "SFX_NOISE_INSTRUMENT01"

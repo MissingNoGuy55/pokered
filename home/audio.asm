@@ -85,7 +85,14 @@ UpdateMusic6Times::
 	jr .next
 
 .audio3
+	cp BANK(Audio3_UpdateMusic)
+	jr nz, .audio4
+; audio 3
 	ld hl, Audio3_UpdateMusic
+	jr .next
+	
+.audio4
+	ld hl, Audio4_UpdateMusic
 
 .next
 	ld c, 6
@@ -189,8 +196,16 @@ PlaySound::
 	jr .next2
 
 .audio3
+	cp BANK(Audio3_PlaySound)
+	jr nz, .audio4
+; audio 3
 	ld a, b
 	call Audio3_PlaySound
+	jr .next2
+	
+.audio4
+	ld a, b
+	call Audio4_PlaySound
 
 .next2
 	ldh a, [hSavedROMBank]

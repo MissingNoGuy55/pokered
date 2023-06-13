@@ -1,4 +1,4 @@
-Music_RocketHideout_Ch1::
+Music_RocketHideout_Ch1:
 	tempo 144
 	volume 7, 7
 	duty_cycle 3
@@ -102,20 +102,19 @@ Music_RocketHideout_Ch1::
 	note F_, 2
 	note G_, 2
 	rest 16
-	volume 11, 7
+	volume_envelope 11, 7
 	octave 2
 	note G#, 16
 	rest 16
 	note A_, 16
-	volume 11, 3
+	volume_envelope 11, 3
 .loop3:
 	rest 16
 	sound_loop 4, .loop3
 	sound_loop 0, .mainloop
 
-Music_RocketHideout_Ch2::
+Music_RocketHideout_Ch2:
 	duty_cycle 3
-	toggle_perfect_pitch
 	; pitch_offset 2
 	vibrato 0, 15, 0
 	note_type 12, 12, 4
@@ -181,20 +180,20 @@ Music_RocketHideout_Ch2::
 	note G#, 4
 	note G_, 2
 	rest 6
-	volume 12, 7
+	volume_envelope 12, 7
 	octave 3
 	note C#, 16
-	volume 12, 4
+	volume_envelope 12, 4
 	octave 2
 	note C#, 2
 	rest 2
 	note G#, 4
 	note G_, 2
 	rest 6
-	volume 12, 7
+	volume_envelope 12, 7
 	octave 3
 	note C#, 16
-	volume 12, 4
+	volume_envelope 12, 4
 	octave 2
 	note C#, 2
 	rest 2
@@ -216,7 +215,7 @@ Music_RocketHideout_Ch2::
 	rest 8
 	sound_loop 0, .mainloop
 
-Music_RocketHideout_Ch3::
+Music_RocketHideout_Ch3:
 	note_type 12, 1, 9
 .mainloop:
 .loop1:
@@ -269,8 +268,8 @@ Music_RocketHideout_Ch3::
 	sound_loop 2, .loop4
 	sound_loop 0, .mainloop
 
-Music_RocketHideout_Ch4::
-	; toggle_noise 0
+Music_RocketHideout_Ch4:
+	;toggle_noise 0
 	drum_speed 12
 	stereo_panning %1101, %1111
 	rest 16
