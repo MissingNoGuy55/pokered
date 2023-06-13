@@ -1173,15 +1173,8 @@ EjaculateAnim:
 	db -1 ; end
 
 BukkakeAnim:
-	; db $46,$5B,$14
-	; db SE_DARK_SCREEN_PALETTE, $FF
-	; db $06,$8B,$41
-	; db SE_WATER_DROPLETS_EVERYWHERE, $3B
-	; db $06,$36,$2C
-	; db SE_RESET_SCREEN_PALETTE, $FF
-	; db $FF
 	battle_anim NO_MOVE, SE_DARK_SCREEN_PALETTE
-	battle_anim ACID, SUBANIM_1_BLOB_TOSS, 1, 6
+	battle_anim ACID, SUBANIM_1_BLOB_TOSS, 1, 12
 	battle_anim BLIZZARD, SE_WATER_DROPLETS_EVERYWHERE
 	battle_anim WATER_GUN, SUBANIM_0_WATER_DROPLETS, 0, 6
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
