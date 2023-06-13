@@ -62,7 +62,7 @@ PokedexEntryPointers:
 	dw TaurosDexEntry
 	dw ThePepperDexEntry
 	dw PostalDexEntry
-	dw MissingNoDexEntry
+	dw UltraDexEntry
 	dw FarfetchdDexEntry
 	dw VenonatDexEntry
 	dw DragoniteDexEntry
@@ -615,6 +615,13 @@ PostalDexEntry:
 	db 6,1
 	dw 1700
 	text_far _PostalDexEntry
+	db "@"
+	
+UltraDexEntry:
+	db "DEMON@"
+	db 7,1
+	dw 1500
+	text_far _UltraDexEntry
 	db "@"
 
 FarfetchdDexEntry:
@@ -1297,7 +1304,7 @@ ElrothDexEntry:
 	db "@"
 	
 HorrificeDexEntry:
-	db "ABOMINATION@"
+	db "INCOMPLETE@"
 	db 6,4
 	dw 2400
 	text_far _HorrificeDexEntry

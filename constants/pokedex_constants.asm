@@ -157,10 +157,11 @@
 	const DEX_MEW        ; 151
 	const DEX_ELROTH     ; 152
 	const DEX_HORRIFICE  ; 153
-	const DEX_DICCMAN    ; 154
-	const DEX_YOURPAL    ; 155
-	const DEX_SANS       ; 156
-	const DEX_THE_PEPPER ; 157
-	const DEX_POSTAL     ; 158
+	const DEX_ULTRA      ; 154
+	const DEX_DICCMAN    ; 155
+	const DEX_YOURPAL    ; 156
+	const DEX_SANS       ; 157
+	const DEX_THE_PEPPER ; 158
+	const DEX_POSTAL     ; 159
 
 DEF NUM_POKEMON EQU const_value - 1

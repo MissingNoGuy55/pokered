@@ -153,6 +153,7 @@ MonPartyData:
 	nybble ICON_MON       ; Mew
 	nybble ICON_MON       ; Elroth
 	nybble ICON_MON       ; Horrifice
+	nybble ICON_MON       ; Ultra
 	nybble ICON_MON       ; Diccman
 	nybble ICON_MON       ; Your pal
 	nybble ICON_MON       ; Sans

@@ -69,7 +69,7 @@
 	const TAUROS       ; $3C
 	const THE_PEPPER   ; $3D
 	const POSTAL       ; $3E
-	const_skip ; $3F
+	const ULTRA        ; $3F
 	const FARFETCHD    ; $40
 	const VENONAT      ; $41
 	const DRAGONITE    ; $42

@@ -154,6 +154,7 @@ MonsterPalettes:
 	db PAL_MEWMON    ; MEW
 	db PAL_REDMON    ; ELROTH
 	db PAL_REDMON    ; HORRIFICE
+	db PAL_REDMON    ; ULTRA
 	db PAL_GREYMON   ; DICCMAN
 	db PAL_YELLOWMON ; YOUR PAL
 	db PAL_GREYMON   ; SANS?!?!?

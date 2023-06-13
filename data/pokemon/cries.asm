@@ -68,7 +68,7 @@ CryData::
 	mon_cry SFX_CRY_1D, $11, $40 ; Tauros
 	mon_cry SFX_CRY_0D, $FF, $00 ; The Pepper
 	mon_cry SFX_CRY_1A, $00, $EE ; Postal
-	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
+	mon_cry SFX_CRY_1C, $60, $60 ; Ultra
 	mon_cry SFX_CRY_10, $DD, $01 ; Farfetch'd
 	mon_cry SFX_CRY_1A, $44, $40 ; Venonat
 	mon_cry SFX_CRY_0F, $3C, $C0 ; Dragonite

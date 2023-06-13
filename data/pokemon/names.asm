@@ -62,7 +62,7 @@ MonsterNames::
 	db "TAUROS@@@@"
 	db "GNU PEPPER"
 	db "POSTAL@@@@"
-	db "MISSINGNO."
+	db "ULTRA@@@@@"
 	db "FARFETCH'D"
 	db "VENONAT@@@"
 	db "DRAGONITE@"

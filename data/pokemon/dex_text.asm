@@ -595,6 +595,16 @@ _ThePepperDexEntry::
 _PostalDexEntry::
 	text "nicE"
 	dex
+	
+_UltraDexEntry::
+	text "Seeing it is"
+	next "capable of"
+	next "melting flesh."
+	
+	page "In most cases"
+	next "it is deemed"
+	next "a planet hazard"
+	dex
 
 _FarfetchdDexEntry::
 	text "The sprig of"

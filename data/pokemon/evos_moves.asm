@@ -65,7 +65,7 @@ EvosMovesPointerTable:
 	dw TaurosEvosMoves
 	dw ThePepperEvosMoves
 	dw PostalEvosMoves
-	dw MissingNo3FEvosMoves
+	dw UltraEvosMoves
 	dw FarfetchdEvosMoves
 	dw VenonatEvosMoves
 	dw DragoniteEvosMoves
@@ -920,6 +920,18 @@ PostalEvosMoves:
 	db 35, BODY_SLAM
 	db 44, EARTHQUAKE
 	db 51, TAKE_DOWN
+	db 0
+	
+UltraEvosMoves:
+; Evolutions
+	db 0
+; Learnset
+	db 42, GLARE
+	db 48, TOXIC
+	db 55, HYPNOSIS
+	db 60, TERRIFY
+	db 65, NIGHTMARE
+	db 75, EARTHQUAKE
 	db 0
 
 MissingNo3FEvosMoves:
