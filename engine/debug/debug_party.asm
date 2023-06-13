@@ -85,7 +85,7 @@ TrainerTypePrompt::
 	text_end
 
 MissiTeam:
-	db HORRIFICE, 100
+	db ULTRA, 100
 IF DEF(_DEBUG)
 	db MEW, 100
 ELSE
@@ -136,23 +136,23 @@ IF DEF(_DEBUG)
 	call SetIshiharaTeam
 
 	; Exeggutor gets four HM moves.
-	; ld hl, wPartyMon1Moves
-	; ld a, FLY
-	; ld [hli], a
-	; ld a, CUT
-	; ld [hli], a
-	; ld a, SURF
-	; ld [hli], a
-	; ld a, STRENGTH
-	; ld [hl], a
-	; ld hl, wPartyMon1PP
-	; ld a, 15
-	; ld [hli], a
-	; ld a, 30
-	; ld [hli], a
-	; ld a, 15
-	; ld [hli], a
-	; ld [hl], a
+	ld hl, wPartyMon1Moves
+	ld a, FLY
+	ld [hli], a
+	ld a, CUT
+	ld [hli], a
+	ld a, SURF
+	ld [hli], a
+	ld a, STRENGTH
+	ld [hl], a
+	ld hl, wPartyMon1PP
+	ld a, 15
+	ld [hli], a
+	ld a, 30
+	ld [hli], a
+	ld a, 15
+	ld [hli], a
+	ld [hl], a
 
 	; Jolteon gets Thunderbolt.
 	ld hl, wPartyMon3Moves + 3

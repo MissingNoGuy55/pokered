@@ -5,9 +5,6 @@ SoftReset::
 	call DelayFrames
 	; fallthrough
 
-TestPlayerName: db "PLAYER@"
-TestRivalName: db "RIVAL@"
-
 Init::
 ;  Program init.
 
@@ -134,48 +131,7 @@ IF DEF (_DEBUG)
 	call RunPaletteCommand
 	call GBPalNormal
 	
-	; Missi: attempt to load a save
-	predef LoadSAV
-	
-	ld hl, wd732
-	; set 2, [hl] ; Missi: needed to make this work. marks this warp as fly or dungeon warp
-	set 1, [hl] ; Missi: set the debug bit
-	
-	; Check save file
-	ld a, [wSaveFileStatus]
-	cp 1
-	jr z, .noSaveFile
-	
-	jr .warpInSaveFile
-
-.noSaveFile
-	; Missi: set player and rival names. these are stored far away for space reasons
-	ld hl, TestPlayerName
-	ld de, wPlayerName
-	ld bc, NAME_LENGTH
-	call CopyData
-	
-	ld hl, TestRivalName
-	ld de, wRivalName
-	ld bc, NAME_LENGTH
-	call CopyData
-	
-	predef InitPlayerData2
-	
-	call DebugStart
-	
-	; Missi: do not try to add mons here, this is before everything gets initialized, so it just freezes
-
-	; Missi: fallthrough
-.warpIn
-	call SpecialWarpIn
-	jp SpecialEnterMap
-	
-.warpInSaveFile
-	jp SpecialEnterMap
-	
-	; Missi: trying to add mons here too will just not work due to not everything being initialized
-	
+	farcall DebugStartGame
 ELSE
 	jp PrepareTitleScreen
 ENDC

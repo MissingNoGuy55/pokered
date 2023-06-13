@@ -16,7 +16,7 @@ INCLUDE "engine/overworld/sprite_collisions.asm"
 
 ; Missi: i would extend on the existing debug menu, but it's kinda crap
 ;INCLUDE "engine/debug/debug_menu.asm"
-INCLUDE "engine/debug/new_debug.asm"
+;INCLUDE "engine/debug/new_debug.asm"
 
 INCLUDE "engine/events/pick_up_item.asm"
 INCLUDE "engine/overworld/movement.asm"
@@ -364,3 +364,7 @@ INCLUDE "engine/items/tm_prices.asm"
 SECTION "Palette Relocation", ROMX
 
 INCLUDE "engine/gfx/palettes.asm"
+
+SECTION "Debug Menu", ROMX
+
+INCLUDE "engine/debug/new_debug.asm"
